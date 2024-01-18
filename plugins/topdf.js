@@ -5,8 +5,8 @@ let mime = (q.msg || q).mimetype || ''
 if (!mime) throw '*هذا الامر خاص بتحويل صورة لـــ pdf*\n*المرجو الاشارة للصورة التي تريد ان تحولها ل pdf ثم تكتب*\n.topdf\n'    
 let img = await q.download?.()
 let url = await uploadImage(img)    
-let docname = text ? text : m.pushName || 'Bobiza'
+let docname = text ? text : m.pushName || 'JINKIZz'
 conn.sendFile(m.chat, `http://api.lolhuman.xyz/api/convert/imgtopdf?apikey=GataDios&img=${url}`, docname + '.pdf', '', m, false, { asDocument: true })
 }
-handler.command = /^topdf$/i
+handler.command = /^pdf$/i
 export default handler
